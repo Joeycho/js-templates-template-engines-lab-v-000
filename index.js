@@ -18,7 +18,7 @@ function createPost() {
 
   templateFn = _.template(postTemplate);
 
-  templateHTML = template();
+  templateHTML = template({});
 
   debugger
 
