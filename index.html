@@ -28,13 +28,14 @@
     <div id="sidebar">
     </div>
     <div id="post">
-    <p><%=title%></p>
+    <p>post will start</p>
     </div>
     </script>
     <script id="post-template" type="text/x-lodash-template">
     <article>
-    <header></header>
-    <footer></footer>
+    <header><%=title%></header>
+    <p><%=body%></p>
+    <footer><%=author%></footer>
     </article>
       </script>
     <script id="comment-template" type="text/x-lodash-template">
