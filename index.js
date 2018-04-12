@@ -28,7 +28,7 @@ function createPost() {
 
   templateHTML = templateFn();
 
-  document.getElementById("post").innerHTML += templateHTML;
+  document.getElementById("start").innerHTML += templateHTML;
 
 }
 function postComment(){
