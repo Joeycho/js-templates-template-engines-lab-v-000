@@ -4,7 +4,7 @@ function createPost() {
   var author =document.getElementById("postAuthor").value;
 
   var pageTemplate = document.getElementById("page-template").innerHTML;
-//  var commentTemplate = document.getElementById("comment-template").innerHTML;
+  var commentsTemplate = document.getElementById("comments-template").innerHTML;
   var postTemplate = document.getElementById("post-template").innerHTML;
 
   var templateFn = _.template(pageTemplate);
@@ -20,9 +20,15 @@ function createPost() {
 
   templateHTML = templateFn({ 'title': title, 'body': body,'author': author });
 
-  debugger
+//  debugger
 
   document.getElementById("start").innerHTML += templateHTML;
+
+  templateFn = _.template(commentsTemplate);
+
+  templateHTML = templateFn();
+
+  document.getElementById("post").innerHTML += templateHTML;
 
 }
 function postComment(){
