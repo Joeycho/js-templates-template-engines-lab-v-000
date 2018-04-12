@@ -5,7 +5,7 @@ function createPost() {
 
   var pageTemplate = document.getElementById("page-template").innerHTML;
 //  var commentTemplate = document.getElementById("comment-template").innerHTML;
-//  var postTemplate = document.getElementById("post-template").innerHTML;
+  var postTemplate = document.getElementById("post-template").innerHTML;
 
   var templateFn = _.template(pageTemplate);
 
@@ -15,6 +15,12 @@ function createPost() {
 //  debugger
 
   document.getElementById("start").innerHTML = templateHTML;
+
+  templateFn = _.template(postTemplate);
+
+  templateHTML = template();
+
+  document.getElementById("start").innerHTML += templateHTML;
 
 }
 function postComment(){
