@@ -11,14 +11,14 @@ function createPost() {
 
 //  var start = document.getElementById("comments");
 
-  var templateHTML = templateFn({ 'title': title, 'body': body,'author': author });
+  var templateHTML = templateFn();
 //  debugger
 
   document.getElementById("start").innerHTML = templateHTML;
 
   templateFn = _.template(postTemplate);
 
-  templateHTML = templateFn();
+  templateHTML = templateFn({ 'title': title, 'body': body,'author': author });
 
   debugger
 
