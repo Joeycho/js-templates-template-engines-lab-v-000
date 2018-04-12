@@ -32,11 +32,15 @@ function createPost() {
 
 }
 function postComment(){
-  var commentsTemplate = document.getElementById("comments-template");
-  var postTemplate = document.getElementById("post-template").innerHTML;
+  var comment = document.getElementById("commentText").value;
+  var commenter = document.getElementById("commenterName").value;
 
-  var templateFn = _.template(postTemplate);
+  var commentTemplate = document.getElementById("comment-template").innerHTML;
+    
+  var templateFn = _.template(commentTemplate);
 
-  var templateHTML = templateFn();
+  var templateHTML = templateFn({'comment':comment, 'commenter':commenter});
+
+  document.getElementById("comments").innerHTML += templateHTML;
 
 }
