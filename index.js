@@ -20,6 +20,8 @@ function createPost() {
 
   templateHTML = template();
 
+  debugger
+
   document.getElementById("start").innerHTML += templateHTML;
 
 }
