@@ -14,7 +14,7 @@ function createPost() {
   var templateHTML = templateFn({ 'title': title, 'body': body,'author': author });
   debugger
 
-  document.innerHTML = templateHTML;
+  document.getElementById("start").innerHTML = templateHTML;
 
 }
 function postComment(){
